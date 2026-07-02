@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scorebug</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="">
+        <h2 class="head" id="head">FIFA WORLD CUP 2026 - GROUP X</h2>
+
+        <div class="main">
+            <div class="team">
+                <img src="./img/espFlag.svg" alt="Spain Flag" class="flag left" id="flagLeft">
+                <h3 class="teamAbbr" id="abbrLeft">ESP</h3>
+                <div class="score left">
+                    <div class="scorebar" style="background-color: #fff; color: #222;"></div>
+                    <div class="scorebar" style="background-color: #fff; color: #222;" id="scoreLeft">1</div>
+                    <div class="scorebar" style="background-color: #fff; color: #222;"></div>
+                </div>
+            </div>
+
+            <div class="time">
+                <h3>97:59</h3>
+            </div>
+
+            <div class="team">
+                <div class="score right" id="scoreRight">
+                    <div class="scorebar" style="background-color: #f36c21; color: #222;"></div>
+                    <div class="scorebar" style="background-color: #f36c21; color: #222;">0</div>
+                    <div class="scorebar" style="background-color: #f36c21; color: #222;"></div>
+                </div>
+                <h3 class="teamAbbr" id="abbrRight">NED</h3>
+                <img src="./img/nedFlag.svg" alt="Netherlands Flag" class="flag right" id="flagRight">
+            </div>
+        </div>
+
+        <div class="main main2" style="background-color: transparent;"></div>
+
+        <h3 class="footer">+8'</h3>
+    </nav>
+
+    <div id="controlPanel">
+        <h4>Control Panel</h4>
+        <form>
+            <div class="LRSec matchType">
+                <label for="gameType">Match Type</label>
+                <select name="gameType" id="gameType">
+                    <option value="" selected disabled hidden>Match Type</option>
+                    <option value="groupA">Group A</option>
+                    <option value="groupB">Group B</option>
+                    <option value="groupC">Group C</option>
+                    <option value="groupD">Group D</option>
+                    <option value="groupE">Group E</option>
+                    <option value="groupF">Group F</option>
+                    <option value="groupG">Group G</option>
+                    <option value="groupH">Group H</option>
+                    <option value="groupI">Group I</option>
+                    <option value="groupJ">Group J</option>
+                    <option value="groupK">Group K</option>
+                    <option value="groupL">Group L</option>
+                    <option value="r32">Round of 32</option>
+                    <option value="r16">Round of 16</option>
+                    <option value="r8">Round of 8</option>
+                    <option value="semis">Semifinals</option>
+                    <option value="3rd">Third Place</option>
+                    <option value="finals">Championship</option>
+                </select>
+            </div>
+
+            <div class="LRSec">
+                <div class="teamSec">
+                    <label for="homeTeam">Home Team</label>
+                    <select name="homeTeam" id="homeTeam" required>
+                        <option value="" selected disabled hidden> -- Please choose an option -- </option>
+                        <optgroup label="Group A">
+                            <option value="MEX">MEX - Mexico</option>
+                            <option value="RSA">RSA - South Africa</option>
+                            <option value="KOR">KOR - South Korea</option>
+                            <option value="CZE">CZE - Czech Republic</option>
+                        </optgroup>
+                        <optgroup label="Group B">
+                            <option value="SUI">SUI - Switzerland</option>
+                            <option value="CAN">CAN - Canada</option>
+                            <option value="BIH">BIH - Bosnia and Herzegovina</option>
+                            <option value="QAT">QAT - Qatar</option>
+                        </optgroup>
+                        <optgroup label="Group C">
+                            <option value="BRA">BRA - Brazil</option>
+                            <option value="MAR">MAR - Morocco</option>
+                            <option value="SCO">SCO - Scotland</option>
+                            <option value="HAI">HAI - Haiti</option>
+                        </optgroup>
+                        <optgroup label="Group D">
+                            <option value="USA">USA - United States</option>
+                            <option value="AUS">AUS - Australia</option>
+                            <option value="PAR">PAR - Paraguay</option>
+                            <option value="TUR">TUR - Turkiye</option>
+                        </optgroup>
+                        <optgroup label="Group E">
+                            <option value="GER">GER - Germany</option>
+                            <option value="CIV">CIV - Cote d'Ivoire</option>
+                            <option value="ECU">ECU - Ecuador</option>
+                            <option value="CUW">CUW - Curacao</option>
+                        </optgroup>
+                        <optgroup label="Group F">
+                            <option value="NED">NED - Netherlands</option>
+                            <option value="JAP">JAP - Japan</option>
+                            <option value="SWE">SWE - Sweden</option>
+                            <option value="TUN">TUN - Tunisia</option>
+                        </optgroup>
+                        <optgroup label="Group G">
+                            <option value="BEL">BEL - Belgium</option>
+                            <option value="EGY">EGY - Egypt</option>
+                            <option value="IRN">IRN - Iran</option>
+                            <option value="NZL">NZL - New Zealand</option>
+                        </optgroup>
+                        <optgroup label="Group H">
+                            <option value="ESP">ESP - Spain</option>
+                            <option value="CPV">CPV - Cabo Verde</option>
+                            <option value="URU">URU - Uruguay</option>
+                            <option value="KSA">KSA - Saudi Arabia</option>
+                        </optgroup>
+                        <optgroup label="Group I">
+                            <option value="FRA">FRA - France</option>
+                            <option value="NOR">NOR - Norway</option>
+                            <option value="SEN">SEN - Senegal</option>
+                            <option value="IRQ">IRQ - Iraq</option>
+                        </optgroup>
+                        <optgroup label="Group J">
+                            <option value="ARG">ARG - Argentina</option>
+                            <option value="AUT">AUT - Austria</option>
+                            <option value="ALG">ALG - Algeria</option>
+                            <option value="JOR">JOR - Jordan</option>
+                        </optgroup>
+                        <optgroup label="Group K">
+                            <option value="COL">COL - Colombia</option>
+                            <option value="POR">POR - Portugal</option>
+                            <option value="COD">COD - Congo DR</option>
+                            <option value="UZB">UZB - Uzbekistan</option>
+                        </optgroup>
+                        <optgroup label="Group L">
+                            <option value="ENG">ENG - England</option>
+                            <option value="CRO">CRO - Croatia</option>
+                            <option value="GHA">GHA - Ghana</option>
+                            <option value="PAN">PAN - Panama</option>
+                        </optgroup>
+                    </select>
+                    <select name="homeJer" id="homeJer" class="jerseySel">
+                        <option value="home" selected>First Kit</option>
+                        <option value="road">Second Kit</option>
+                    </select>
+                </div>
+
+                <div class="teamSec">
+                    <label for="awayTeam">Away Team</label>
+                    <select name="awayTeam" id="awayTeam" required>
+                        <option value="" selected disabled hidden> -- Please choose an option -- </option>
+                        <optgroup label="Group A">
+                            <option value="MEX">MEX - Mexico</option>
+                            <option value="RSA">RSA - South Africa</option>
+                            <option value="KOR">KOR - South Korea</option>
+                            <option value="CZE">CZE - Czech Republic</option>
+                        </optgroup>
+                        <optgroup label="Group B">
+                            <option value="SUI">SUI - Switzerland</option>
+                            <option value="CAN">CAN - Canada</option>
+                            <option value="BIH">BIH - Bosnia and Herzegovina</option>
+                            <option value="QAT">QAT - Qatar</option>
+                        </optgroup>
+                        <optgroup label="Group C">
+                            <option value="BRA">BRA - Brazil</option>
+                            <option value="MAR">MAR - Morocco</option>
+                            <option value="SCO">SCO - Scotland</option>
+                            <option value="HAI">HAI - Haiti</option>
+                        </optgroup>
+                        <optgroup label="Group D">
+                            <option value="USA">USA - United States</option>
+                            <option value="AUS">AUS - Australia</option>
+                            <option value="PAR">PAR - Paraguay</option>
+                            <option value="TUR">TUR - Turkiye</option>
+                        </optgroup>
+                        <optgroup label="Group E">
+                            <option value="GER">GER - Germany</option>
+                            <option value="CIV">CIV - Cote d'Ivoire</option>
+                            <option value="ECU">ECU - Ecuador</option>
+                            <option value="CUW">CUW - Curacao</option>
+                        </optgroup>
+                        <optgroup label="Group F">
+                            <option value="NED">NED - Netherlands</option>
+                            <option value="JAP">JAP - Japan</option>
+                            <option value="SWE">SWE - Sweden</option>
+                            <option value="TUN">TUN - Tunisia</option>
+                        </optgroup>
+                        <optgroup label="Group G">
+                            <option value="BEL">BEL - Belgium</option>
+                            <option value="EGY">EGY - Egypt</option>
+                            <option value="IRN">IRN - Iran</option>
+                            <option value="NZL">NZL - New Zealand</option>
+                        </optgroup>
+                        <optgroup label="Group H">
+                            <option value="ESP">ESP - Spain</option>
+                            <option value="CPV">CPV - Cabo Verde</option>
+                            <option value="URU">URU - Uruguay</option>
+                            <option value="KSA">KSA - Saudi Arabia</option>
+                        </optgroup>
+                        <optgroup label="Group I">
+                            <option value="FRA">FRA - France</option>
+                            <option value="NOR">NOR - Norway</option>
+                            <option value="SEN">SEN - Senegal</option>
+                            <option value="IRQ">IRQ - Iraq</option>
+                        </optgroup>
+                        <optgroup label="Group J">
+                            <option value="ARG">ARG - Argentina</option>
+                            <option value="AUT">AUT - Austria</option>
+                            <option value="ALG">ALG - Algeria</option>
+                            <option value="JOR">JOR - Jordan</option>
+                        </optgroup>
+                        <optgroup label="Group K">
+                            <option value="COL">COL - Colombia</option>
+                            <option value="POR">POR - Portugal</option>
+                            <option value="COD">COD - Congo DR</option>
+                            <option value="UZB">UZB - Uzbekistan</option>
+                        </optgroup>
+                        <optgroup label="Group L">
+                            <option value="ENG">ENG - England</option>
+                            <option value="CRO">CRO - Croatia</option>
+                            <option value="GHA">GHA - Ghana</option>
+                            <option value="PAN">PAN - Panama</option>
+                        </optgroup>
+                    </select>
+                    <select name="awayJer" id="awayJer" class="jerseySel">
+                        <option value="home">First Kit</option>
+                        <option value="road" selected>Second Kit</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

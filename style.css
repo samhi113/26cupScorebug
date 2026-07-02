@@ -1,0 +1,248 @@
+@font-face {
+    font-family: "Degular Demo";
+    src: url("./DegularDemo-Bold.otf");
+}
+
+html {
+    background-color: #84bf77;
+}
+
+* {
+    font-family: "Degular Demo";
+    font-weight: bold;
+    
+    transition: all 0.25s ease-in-out;
+
+    --scaleSize: 1.5;
+}
+
+nav {
+    position: absolute;
+    top: 2.5vh;
+    left: 2.5vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .head {
+    height: calc(0.667 * var(--scaleSize) * (1vh + 1vw));
+    width: calc(8.333 * var(--scaleSize) * (1vh + 1vw));
+
+    margin: 0;
+    justify-content: center;
+    font-size: calc(0.425 * var(--scaleSize) * (1vh + 1vw));
+
+    border-top-left-radius: calc(0.667 * var(--scaleSize) * (1vh + 1vw));
+    border-top-right-radius: calc(0.667 * var(--scaleSize) * (1vh + 1vw));
+}
+
+nav .main {
+    z-index: 1;
+
+    display: flex;
+
+    width: calc(13.333 * var(--scaleSize) * (1vh + 1vw));
+    height: calc(var(--scaleSize) * (1vh + 1vw));
+}
+
+nav .main2 {
+    margin-top: calc(-1 * var(--scaleSize) * (1vh + 1vw));
+    box-shadow: inset -5px 5px 0 0 #ffffff20, inset 5px -5px 0 0 #00000010;
+    z-index: 5;
+}
+
+nav * {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .main .team {
+    width: calc(5.667 * var(--scaleSize) * (1vh + 1vw));
+}
+
+nav .main .team .flag {
+    width: calc(2.5 * var(--scaleSize) * (1vh + 1vw));
+    object-fit: cover;
+}
+
+nav .main .team .flag, nav .main {
+    border-top-left-radius: calc(0.667 * var(--scaleSize) * (1vh + 1vw));
+    border-bottom-right-radius: calc(0.667 * var(--scaleSize) * (1vh + 1vw));
+}
+
+nav .main .team .teamAbbr {
+    font-size: calc(0.5 * var(--scaleSize) * (1vh + 1vw));
+}
+
+nav .main .team .score {
+    aspect-ratio: 1.25;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(0.75 * var(--scaleSize) * (1vh + 1vw));
+
+    z-index: 2;
+}
+
+nav .main .team .score .scorebar {
+    width: 100%;
+    height: calc(0.333 * var(--scaleSize) * (1vh + 1vw));
+    
+    justify-content: center;
+}
+
+nav .main .team .score.left .scorebar:first-child {
+    border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+}
+
+nav .main .team .score.left .scorebar:nth-child(2) {
+    border-top-left-radius: 999px;
+    border-bottom-right-radius: 999px;
+    z-index: 3;
+}
+
+nav .main .team .score.right .scorebar:first-child {
+    border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+}
+
+nav .main .team .score.right .scorebar:nth-child(2) {
+    border-top-right-radius: 999px;
+    z-index: 3;
+}
+
+nav .main .team .score.right .scorebar:nth-child(3) {
+    border-bottom-left-radius: 999px;
+    border-bottom-right-radius: 999px;
+}
+
+nav .main .time {
+    z-index: 0;
+
+    justify-content: center;
+
+    margin: 0 calc(-0.333 * var(--scaleSize) * (1vh + 1vw));
+    width: calc(3.333 * var(--scaleSize) * (1vh + 1vw));
+    font-size: calc(0.667 * var(--scaleSize) * (1vh + 1vw));
+}
+
+nav .footer {
+
+    margin: 0;
+    justify-content: center;
+
+    width: calc(5 * var(--scaleSize) * (1vh + 1vw));
+    height: calc(0.75 * var(--scaleSize) * (1vh + 1vw));
+    font-size: calc(0.667 * var(--scaleSize) * (1vh + 1vw));
+
+    border-bottom-left-radius: calc(0.75 * var(--scaleSize) * (1vh + 1vw));
+    border-bottom-right-radius: calc(0.75 * var(--scaleSize) * (1vh + 1vw));
+}
+
+
+/*  */
+
+
+nav .head {
+    background-color: #00000080;
+    color: #ddd;
+}
+
+nav .main {
+    background-color: #222;
+    color: #ddd;
+}
+
+nav .main .time {
+    background-color: #ddd;
+    color: #222;
+}
+
+nav .footer {
+    background-color: #b23;
+    color: #ddd;
+}
+
+
+/* Final Game Styling */
+
+
+nav.final .head {
+    background-color: #00000080;
+    color: #ddd;
+}
+
+nav.final .main {
+    background-color: #da5;
+    color: #222;
+}
+
+nav.final .main .time {
+    background-color: #222;
+    color: #da5;
+}
+
+nav.final .footer {
+    background-color: #b23;
+    color: #ddd;
+}
+
+
+/* Non-Scorebug Styling */
+
+
+#controlPanel {
+    position: absolute;
+    left: 40vw;
+    top: 5vh;
+
+    min-width: 25vw;
+    min-height: 30vh;
+
+    background-color: #00000080;
+    color: #ddd;
+}
+
+#controlPanel .LRSec {
+    min-width: 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#controlPanel .LRSec.matchType {
+    max-width: 12.5vw;
+}
+
+#controlPanel .LRSec .teamSec {
+    margin-top: 2vh;
+    min-height: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#controlPanel .LRSec .teamSec optgroup {
+    background-color: #bbb;
+}
+
+#controlPanel .LRSec .teamSec label {
+    color: #ddd;
+    background-color: transparent;
+}
+
+#controlPanel .LRSec .teamSec * {
+    background-color: #ddd;
+    color: #222;
+    font-size: calc(0.667 * (1vh + 1vw));
+}
