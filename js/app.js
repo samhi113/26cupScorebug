@@ -168,7 +168,7 @@ homeTeam.addEventListener("change", (e) => {
 
     var code = homeTeam.value;
 
-    flagLeft.setAttribute("src", `./img/${code}Flag.svg`);
+    flagLeft.setAttribute("src", `./img/${code.toLowerCase()}Flag.svg`);
     abbrLeft.textContent = code;
 
     changeOptions("home", code);
@@ -179,14 +179,36 @@ awayTeam.addEventListener("change", (e) => {
 
     var code = awayTeam.value;
 
-    flagRight.setAttribute("src", `./img/${code}Flag.svg`);
+    flagRight.setAttribute("src", `./img/${code.toLowerCase()}Flag.svg`);
     abbrRight.textContent = code;
 
     changeOptions("away", code);
 });
 
 homeJer.addEventListener("change", (e) => {
+    e.preventDefault();
+    
+    var scorebar = scoreLeft.querySelectorAll(".scorebar");
+    var country = homeTeam.value;
+    var jersey = homeJer.value;
 
+    scorebar.forEach((element) => {
+        element.style.backgroundColor = teamVals[country][jersey][0];
+        element.style.color = teamVals[country][jersey][1];
+    })
+})
+
+awayJer.addEventListener("change", (e) => {
+    e.preventDefault();
+    
+    var scorebar = scoreRight.querySelectorAll(".scorebar");
+    var country = awayTeam.value;
+    var jersey = awayJer.value;
+
+    scorebar.forEach((element) => {
+        element.style.backgroundColor = teamVals[country][jersey][0];
+        element.style.color = teamVals[country][jersey][1];
+    })
 })
 
 function changeOptions(homeAway, country) {
